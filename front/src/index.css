@@ -1,0 +1,68 @@
+body {
+  margin: 45px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(17, 13, 13);
+  text-align: center;
+  color: bisque;
+}
+
+.MyTitle{
+  text-align: center;
+}
+
+.MyForm{
+  padding: 1%;
+}
+
+.MyInput{
+  width: 50%;
+  height: 36px;
+  text-align: center;
+  color: bisque;
+  background-color:rgba(43, 43, 121, 0.575);
+}
+
+.MyButton{
+  width: 30%;
+  height: 40px;
+  color: bisque;
+  background-color:rgba(224, 78, 10, 0.986);
+}
+
+.MyTable{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #042d5c;
+}
+
+.MyTd{
+  width: 15%;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.MyTodo{
+  width: 70%;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.MyCheck{
+  width: 15%;
+  border-bottom: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+.MyTd:hover {background-color: rgb(0, 110, 255);}
+.MyTodo:hover {background-color: rgb(0, 110, 255);}
+.MyCheck:hover {background-color: rgb(0, 110, 255);}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
