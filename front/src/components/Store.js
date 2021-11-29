@@ -1,7 +1,8 @@
 import React, {useReducer, createContext} from 'react';
 import Reducer from './Reducer';
 
-export const initialState = {todo: { list: [], item: {} }};
+// el componente parent sirve para indicar el contenedor de las listas
+export const initialState = {todo: {list: [], item: {}}, list:[]};
 export const Store = createContext(initialState);
 
 export const StoreProvider = ({ children }) => {

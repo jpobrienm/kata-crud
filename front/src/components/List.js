@@ -5,6 +5,7 @@ const List = (props) => {
     const HOST_API = props.HOST_API;
     const { dispatch, state: { todo } } = useContext(Store);
     const currentList = todo.list;
+    console.log(currentList);
 
     useEffect(() => {
       fetch(HOST_API + "/todos")
