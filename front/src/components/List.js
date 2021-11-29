@@ -12,7 +12,7 @@ const List = (props) => {
         .then((list) => {
           dispatch({ type: "update-list", list })
         })
-    }, [dispatch]);
+    }, [dispatch, HOST_API]);
 
     const onDelete = (id) => {
       fetch(HOST_API + "/" + id + "/todo", {

@@ -1,6 +1,4 @@
 import React, { useContext, useRef, useState} from 'react';
-import { StoreContext } from './Store';
-import { useForm } from './useForm';
 import { Store } from './Store';
 
 const Form = (props) =>{
@@ -12,34 +10,44 @@ const Form = (props) =>{
 
     const onAdd = (event) => {
         event.preventDefault();
-    
+
+        if(state.name === undefined || !/\S/.test(state.name)){
+            state.name = undefined;
+            return;
+        }
+
         const request = {
-          name: state.name,
-          id: null,
-          completed: false
-        };
-    
-    
-        fetch(HOST_API + "/todo", {
-          method: "POST",
-          body: JSON.stringify(request),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-          .then(response => response.json())
-          .then((todo) => {
-            dispatch({ type: "add-item", item: todo });
-            setState({ name: "" });
-            formRef.current.reset();
-          });
+            name: state.name.trim(),
+            id: null,
+            completed: false
+          };
+      
+      
+          fetch(HOST_API + "/todo", {
+            method: "POST",
+            body: JSON.stringify(request),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+            .then(response => response.json())
+            .then((todo) => {
+              dispatch({ type: "add-item", item: todo });
+              setState({ name: "" });
+              formRef.current.reset();
+            });
     }
 
     const onEdit = (event) => {
         event.preventDefault();
+
+        if(state.name === undefined || !/\S/.test(state.name)){
+            state.name = undefined;
+            return;
+        }
     
         const request = {
-          name: state.name,
+          name: state.name.trim(),
           id: item.id,
           isCompleted: item.isCompleted
         };

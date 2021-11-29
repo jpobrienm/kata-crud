@@ -1,10 +1,7 @@
-import React, {useState, useReducer, createContext} from 'react';
+import React from 'react';
 import Form from './components/Form';
 import List from './components/List';
-import Reducer from './components/Reducer';
-import { Store, initialState } from './components/Store';
-import { useForm } from './components/useForm';
-import StoreProvider from './components/StoreProvider';
+import { StoreProvider } from './components/Store';
 
 const HOST_API = "http://localhost:8080/api";
 
